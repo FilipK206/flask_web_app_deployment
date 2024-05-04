@@ -1,5 +1,5 @@
-from flask import Flask
 import uuid
+from flask import Flask
 
 # Creating a Flask application instance
 app = Flask(__name__)  
