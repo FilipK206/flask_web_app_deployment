@@ -1,0 +1,10 @@
+appName: load-test
+namespace: default
+replicaCount: 1
+image:
+  repository: filipk206/locust-container
+  tag: latest
+service:
+  port: 8089
+  targetPort: 8089
+environment: production

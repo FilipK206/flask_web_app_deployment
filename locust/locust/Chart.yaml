@@ -1,0 +1,6 @@
+apiVersion: v2
+name: locust
+description: A Helm chart for deploying Locust load testing tool
+type: application
+version: 0.1.0
+appVersion: 1.0.0
