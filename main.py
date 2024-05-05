@@ -1,5 +1,6 @@
 """
-This module contains a Flask application for temperature conversion and serves as the main entry point.
+This module contains a Flask application for temperature conversion 
+and serves as the main entry point.
 """
 
 import uuid
@@ -42,4 +43,10 @@ def temp_convert(fahrenheit):
         return {"Error": "Invalid input"}, 400
 
 if __name__ == '__main__':
-    app.run(debug=True)  # Running the Flask application in debug mode
+    app.run(host='0.0.0.0', port=8080, debug=True) 
+    '''
+    Makes the Flask application accessible on port 8080 from within the container
+    Allows the application to listen on all available network interfaces within the container.
+    '''
+    
+
