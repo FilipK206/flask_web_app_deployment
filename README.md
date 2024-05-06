@@ -1,4 +1,4 @@
-# OpenX Internship Project
+# Flask WEB APP vs Tensorflow model Project
 
 This project aims to deploy a Flask web application and TensorFlow Serving model on Kubernetes using Helm charts and Docker containers.
 
