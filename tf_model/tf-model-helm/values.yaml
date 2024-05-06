@@ -5,6 +5,6 @@ image:
   repository: filipk206/tf-model
   tag: latest
 service:
-  port: 8080
-  targetPort: 8080
+  port: 8501
+  targetPort: 8501
 environment: production
