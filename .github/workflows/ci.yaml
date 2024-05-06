@@ -9,7 +9,7 @@ jobs:
   build:
     name: Build Docker image
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -23,12 +23,9 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Build Docker image
-        run: docker build -t flask-app .
+        run: docker build -t filipk206/flask-app:latest .
       
-      - name: Tag Docker image
-        run: docker tag flask-app:latest filipk206/flask-app:latest
-
       - name: Push Docker image
         run: |
           docker login -u filipk206 -p ${{ secrets.DOCKER_HUB_TOKEN }}
-          docker push filipk206/locust-container:latest
+          docker push filipk206/flask-app:latest
