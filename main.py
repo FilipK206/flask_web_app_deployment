@@ -57,7 +57,7 @@ def temp_predict(fahrenheit):
         fahrenheit = float(fahrenheit)
 
         # Make predictions using the loaded model
-        predictions = model(fahrenheit)
+        predictions = model.predict(fahrenheit)
 
         # Return the predicted Celsius temperature along with the app ID
         return {"celsius (predicted)": predictions, 'app id': app_id}, 200
