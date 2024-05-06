@@ -1,0 +1,4 @@
+apiVersion: v2
+name: tensorflow-serving-chart
+version: 0.1.0
+description: A Helm chart for deploying TensorFlow Serving

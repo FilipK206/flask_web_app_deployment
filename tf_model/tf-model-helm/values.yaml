@@ -1,0 +1,10 @@
+appName: tf-model
+namespace: default
+replicaCount: 1
+image:
+  repository: filipk206/tf-model
+  tag: latest
+service:
+  port: 8080
+  targetPort: 8080
+environment: production
