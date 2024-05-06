@@ -45,25 +45,7 @@ def temp_convert(fahrenheit):
     except ValueError:
         # Handling the case where the input cannot be converted to a float
         return {"Error": "Invalid input"}, 400
-    
-@app.route("/predict/<fahrenheit>")
-def temp_predict(fahrenheit):
-    """
-    Route handler for URL pattern "/predict/<fahrenheit>".
-    Predicts the Celsius temperature corresponding to the given Fahrenheit temperature.
-    """
-    try:
-        # Convert the Fahrenheit temperature to float
-        fahrenheit = float(fahrenheit)
 
-        # Make predictions using the loaded model
-        predictions = model.predict(fahrenheit)
-
-        # Return the predicted Celsius temperature along with the app ID
-        return {"celsius (predicted)": predictions, 'app id': app_id}, 200
-    except ValueError:
-        # Handling the case where the input cannot be converted to a float
-        return {"Error": "Invalid input"}, 400
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080, debug=True) 
