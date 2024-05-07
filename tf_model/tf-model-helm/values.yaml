@@ -1,6 +1,6 @@
 appName: tf-model
 namespace: default
-replicaCount: 1
+replicaCount: 2
 image:
   repository: filipk206/tf-model
   tag: latest

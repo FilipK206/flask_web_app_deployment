@@ -5,10 +5,6 @@ and serves as the main entry point.
 
 import uuid
 from flask import Flask
-import tensorflow as tf
-
-# Loading the TensorFlow SavedModel
-model = tf.saved_model.load("\tf_model\saved_model.pb")
 
 # Creating a Flask application instance
 app = Flask(__name__)
