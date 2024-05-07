@@ -26,11 +26,9 @@ jobs:
         run: |
           docker build -t filipk206/flask-app:latest .
           docker build -t filipk206/locust-container:latest ./locust
-          docker build -t filipk206/tf-model:latest ./tf_model
       
       - name: Push Docker image
         run: |
           docker login -u filipk206 -p ${{ secrets.DOCKER_HUB_TOKEN }}
           docker push filipk206/flask-app:latest
           docker push filipk206/locust-container:latest
-          docker push filipk206/tf-model:latest
